@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/addbook',[HomeController::class,'addbook'])->name('add.book');
 Route::post('/addbook',[HomeController::class,'addbooksubmit'])->name('add.book'); 
 Route::get('/delete{id}',[HomeController::class,'deletebook'])->name('delete.book'); 
 Route::get('/update{id}',[HomeController::class,'updatebook'])->name('delete.book'); 
+Route::get('/getrelation',[CustomerController::class,'getone'])->name('get.one'); 
+Route::get('/getrelmany',[CustomerController::class,'getmany'])->name('get.many'); 
